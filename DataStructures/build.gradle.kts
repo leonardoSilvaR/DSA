@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "com.ds"
+group = "com.data.structure"
 version = "1.0-SNAPSHOT"
 
 repositories {
