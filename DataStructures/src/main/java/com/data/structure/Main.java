@@ -8,7 +8,18 @@ public class Main {
         SimpleArray array = new SimpleArray();
         array.push("Leonardo");
         array.push("Teste");
+        array.push("Array Impl");
+        array.push("Teste1");
+        array.push("Teste1");
+        array.push("Teste1");
+        array.push("Teste1");
+        array.push("Teste1");
+        array.push("Teste1");
+        array.push("Teste1");
+//        array.pop();
 
-        System.out.println(array.get(0));
+        array.search("Teste");
+
+        System.out.println(array);
     }
 }
