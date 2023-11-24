@@ -3,7 +3,7 @@ package com.data.structure.array;
 import java.util.Arrays;
 
 public class SimpleArray {
-    private static final int INITIAL_LENGTH = 2;
+    private static final int INITIAL_LENGTH = 10;
     private int length;
     private Object[] data;
 
@@ -20,7 +20,7 @@ public class SimpleArray {
      * @param element Object to be inserted
      */
     public void push(Object element) {
-        if (length >= data.length - 1) {
+        if (length >= data.length) {
             data = resize(data);
         }
         this.data[length] = element;
