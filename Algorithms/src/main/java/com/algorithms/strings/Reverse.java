@@ -2,6 +2,11 @@ package com.algorithms.strings;
 
 public class Reverse {
 
+    /**
+     * This algorithm takes O(n) time and space complexity
+     * @param array Current char array to be reversed
+     * @return Reversed array
+     */
     public static char[] reverse(char[] array) {
         int length = array.length;
 
