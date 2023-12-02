@@ -1,5 +1,7 @@
 package com.algorithms.trees.traversals;
 
+import com.data.structure.tree.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -15,20 +17,20 @@ public class BreathSearchFirst {
      * @param root Binary tree
      * @return traversal order
      */
-    public List<Integer> search(Node root) {
+    public List<Integer> search(TreeNode root) {
         if (root == null) return new ArrayList<>();
 
         List<Integer> values = new ArrayList<>();
-        Queue<Node> queue = new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
 
         queue.add(root);
 
         while (queue.size() > 0) {
-            Node current = queue.remove();
-            values.add(current.data);
+            TreeNode current = queue.remove();
+            values.add(current.getData());
 
-            if (current.left != null) queue.add(current.left);
-            if (current.right != null) queue.add(current.right);
+            if (current.getLeft() != null) queue.add(current.getLeft());
+            if (current.getRight() != null) queue.add(current.getRight());
         }
 
         return values;
@@ -36,73 +38,31 @@ public class BreathSearchFirst {
 
 
     //TODO:To implement recursive first the height of the tree must be known
-    public void searchRecursive(Node root) {
+    public void searchRecursive(TreeNode root) {
 
     }
 
 
     public static void main(String[] args) {
-        Node root = new Node(1);
-        Node leftChild = new Node(2);
-        Node rightChild = new Node(3);
-        Node leftChild1 = new Node(4);
-        Node leftChild2 = new Node(6);
-        Node rightChild1 = new Node(7);
+        TreeNode root = new TreeNode(1);
+        TreeNode leftChild = new TreeNode(2);
+        TreeNode rightChild = new TreeNode(3);
+        TreeNode leftChild1 = new TreeNode(4);
+        TreeNode leftChild2 = new TreeNode(6);
+        TreeNode rightChild1 = new TreeNode(7);
 
-        root.left = leftChild;
-        root.right = rightChild;
+        root.setLeft(leftChild);
+        root.setRight(rightChild);
 
-        leftChild.left = leftChild1;
+        leftChild.setLeft(leftChild1);
 
-        rightChild.left = leftChild2;
-        rightChild.right = rightChild1;
+        rightChild.setLeft(leftChild2);
+        rightChild.setRight(rightChild1);
 
 
         BreathSearchFirst bsf = new BreathSearchFirst();
         System.out.println(bsf.search(root));
-          
     }
-
 
 }
 
-class Node {
-    final int data;
-    Node left;
-    Node right;
-
-    public Node(int data) {
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-
-//    public int getData() {
-//        return data;
-//    }
-//
-//    public Node getLeft() {
-//        return left;
-//    }
-//
-//    public Node getRight() {
-//        return right;
-//    }
-//
-//    public void setLeft(Node left) {
-//        this.left = left;
-//    }
-//
-//    public void setRight(Node right) {
-//        this.right = right;
-//    }
-
-    @Override
-    public String toString() {
-        return "Node{" +
-                "data=" + data +
-                ", left=" + left +
-                ", right=" + right +
-                '}';
-    }
-}

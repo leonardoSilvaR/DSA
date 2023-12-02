@@ -9,12 +9,12 @@ public class BinaryTree {
 
 
     public static void main(String[] args) {
-        Node root = new Node(1);
-        Node child1 = new Node(2);
-        Node child2 = new Node(3);
-        Node child3 = new Node(4);
-        Node child4 = new Node(5);
-        Node child5 = new Node(6);
+        TreeNode root = new TreeNode(1);
+        TreeNode child1 = new TreeNode(2);
+        TreeNode child2 = new TreeNode(3);
+        TreeNode child3 = new TreeNode(4);
+        TreeNode child4 = new TreeNode(5);
+        TreeNode child5 = new TreeNode(6);
 
         root.setLeft(child1);
         root.setRight(child2);
@@ -28,43 +28,3 @@ public class BinaryTree {
     }
 }
 
-class Node {
-    private final int data;
-    private Node left;
-    private Node right;
-
-    public Node(int data) {
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-
-    public int getData() {
-        return data;
-    }
-
-    public Node getLeft() {
-        return left;
-    }
-
-    public Node getRight() {
-        return right;
-    }
-
-    public void setLeft(Node left) {
-        this.left = left;
-    }
-
-    public void setRight(Node right) {
-        this.right = right;
-    }
-
-    @Override
-    public String toString() {
-        return "Node{" +
-                "data=" + data +
-                ", left=" + left +
-                ", right=" + right +
-                '}';
-    }
-}

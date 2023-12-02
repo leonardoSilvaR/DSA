@@ -1,0 +1,4 @@
+rootProject.name = 'DSA'
+
+include('Algorithms')
+include('DataStructures')

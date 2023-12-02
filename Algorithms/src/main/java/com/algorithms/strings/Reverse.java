@@ -21,5 +21,11 @@ public class Reverse {
         return reversedArray;
     }
 
+    public static void main(String[] args) {
+        String toBeReversed = "Leonardo Rodrigues";
+
+        System.out.print(Reverse.reverse(toBeReversed.toCharArray()));
+    }
+
 
 }
