@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class BreathSearchFirst {
+public class BreathFirstSearch {
 
     /**
      * BFS using queue.
@@ -60,7 +60,7 @@ public class BreathSearchFirst {
         rightChild.setRight(rightChild1);
 
 
-        BreathSearchFirst bsf = new BreathSearchFirst();
+        BreathFirstSearch bsf = new BreathFirstSearch();
         System.out.println(bsf.search(root));
     }
 
