@@ -59,7 +59,7 @@ public class BreathSearchFirst {
 
 
         BreathSearchFirst bsf = new BreathSearchFirst();
-//        System.out.println(bsf.search(root));
+        System.out.println(bsf.search(root));
         
     }
 
