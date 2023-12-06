@@ -52,7 +52,7 @@ public class LongestCommonPrefix {
         Arrays.sort(strs);
 
         int lengthSmallWord = strs[0].toCharArray().length;
-        
+
         for (int i = 0; i < lengthSmallWord; i++) {
             char firstLetterFirstItem = strs[0].charAt(i);
             char firstLetterLastItem = strs[strs.length - 1].charAt(i);
@@ -67,10 +67,11 @@ public class LongestCommonPrefix {
         return result;
     }
 
+
+
     public static void main(String[] args) {
         String[] strs = new String[]{"flower", "flow", "flight"};
-
-//        System.out.println(LongestCommonPrefix.longestCommonPrefix(strs));
+        System.out.println(LongestCommonPrefix.longestCommonPrefix(strs));
         System.out.println(LongestCommonPrefix.optimal(strs));
     }
 }
