@@ -1,4 +1,4 @@
-package com.data.structure.hash;
+package com.data.structure.hashtable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -106,10 +106,6 @@ public class HashTable {
         return "HashTable{" + Arrays.toString(bucket) + '}';
     }
 
-
-}
-
-class Testing {
     public static void main(String[] args) {
         HashTable hashTable = new HashTable();
         hashTable.put("Test", "Television");

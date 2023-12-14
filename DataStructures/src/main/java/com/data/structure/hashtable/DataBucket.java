@@ -1,4 +1,4 @@
-package com.data.structure.hash;
+package com.data.structure.hashtable;
 
 public class DataBucket {
     private String key;
