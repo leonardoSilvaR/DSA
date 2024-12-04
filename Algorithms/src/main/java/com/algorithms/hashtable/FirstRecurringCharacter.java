@@ -1,13 +1,19 @@
 package com.algorithms.hashtable;
 
-import com.data.structure.hashtable.HashTable;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class FirstRecurringCharacter {
 
 
+    /**
+     * Optimized version
+     * Time complexity O(n)
+     * space complexity O(n)
+     *
+     * @param items array
+     * @return first recurring
+     */
     public String find(String[] items) {
         Map<String, String> hashTable = new HashMap<>();
         for (int i = 0; i < items.length; i++) {
